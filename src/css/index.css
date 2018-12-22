@@ -1,0 +1,56 @@
+html {
+	height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+body {
+	font: 12px/18px Arial, sans-serif;
+	height: 100%;
+}
+
+.wrapper {
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+}
+
+/* Header
+----------------------------------------------------------------------------- */
+.header {
+	height: 700px;
+	background: #ffe680;
+}
+
+/* Middle
+----------------------------------------------------------------------------- */
+.content {
+	padding: 0 0 198px;
+}
+
+/* Footer
+----------------------------------------------------------------------------- */
+.footer {
+	margin: -198px auto 0;
+	min-width: 320px;
+	max-width: 1440px;
+	height: 198px;
+	background: #bff08e;
+	position: relative;
+}
