@@ -181,23 +181,42 @@ colors
 
 /* section-gallery
 ----------------------------------------------------------------------------- */
+.section-gallery {
+	margin: 0 230px 100px;
+}
+
 .section-gallery a {
 	text-decoration: none;
 }
 
-.wrapper-images .item-image {
-	position: relative;
+.wrapper-images li {
 	display: inline-block;
 	margin: 10px;
-	text-align: center;
 }
 
-.wrapper-images .item-image h3 {
+.wrapper-images .item-link {
 	position: relative;
+	display: inline-block;
+}
+
+.wrapper-images .item-link h3 {
+	position: relative;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 310px;
 	z-index: 1;
 }
 
-.wrapper-images .item-image img {
+.wrapper-images .item-image-small h3 {
+	width: 300px;
+}
+
+.wrapper-images .item-image-big h3 {
+	width: 620px;
+}
+
+.wrapper-images .item-link img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -205,36 +224,20 @@ colors
 }
 
 @media (max-width: 1023px) {
-	.wrapper-images li {
-		margin: 8px;
+	.section-gallery {
+		margin: 0 0 100px;
 	}
 
-	.wrapper-images .item-image-small {
-		display: inline-block;
-		width: 236px;
-		height: 311px;
+	.wrapper-images a {
 		overflow: hidden;
 	}
 
-	.wrapper-images .item-image-big {
-		display: inline-block;
-		width: 492px;
-		height: 310px;
-		overflow: hidden;
+	.wrapper-images .item-image-small h3 {
+		width: 233px;
 	}
 
-	.wrapper-images .item-image {
-		width: 100%;
-		height: 100%;
-		margin: 0;
-	}
-
-	.wrapper-images .item-image h3 {
-		display: table-cell;
-		width: 236px;
-		height: 311px;
-		text-align: center;
-		vertical-align: middle;
+	.wrapper-images .item-image-big h3 {
+		width: 490px;
 	}
 }
 
@@ -266,31 +269,31 @@ colors
 /* section-search
 ----------------------------------------------------------------------------- */
 .section-search {
-	margin-bottom: 40px;
+	margin-bottom: 100px;
 }
 
+.form-search {
+	text-align: center;
+}
+
+.form-search .input-search {
+	width: 280px;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 0 #eee;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: normal;
+	font-weight: 300;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	padding-left: 16px;
+}
+
+.form-search .btn-search {
+	margin-left: 10px;
+}
 @media (max-width: 480px) {
-	.section-search {
-		margin-bottom: 0;
-	}
-
-	.form-search {
-		text-align: center;
-	}
-
-	.form-search .input-search {
-		width: 280px;
-		height: 40px;
-		border-radius: 4px;
-		border: 1px solid #ccc;
-		box-shadow: 0 1px 0 #eee;
-		margin-bottom: 10px;
-		font-size: 14px;
-		line-height: normal;
-		font-weight: 300;
-		font-family: 'Roboto', 'Arial', sans-serif;
-		padding-left: 16px;
-	}
 }
 
 /* Footer
@@ -299,9 +302,10 @@ colors
 	margin: -198px auto 0;
 	min-width: 320px;
 	max-width: 1440px;
+	width: 100%;
 	height: 198px;
 	position: relative;
-	display: inline-block;
+	display: block;
 }
 
 .footer::before {
@@ -310,49 +314,69 @@ colors
 	width: 100%;
 	height: 4px;
 	background-color: #ff4e50;
+	margin-bottom: 36px;
 }
 
 .footer a {
 	text-decoration: none;
 }
 
+.footer h5 {
+	line-height: 10px;
+}
+
+.footer-logo,
+.footer-menu,
+.footer-designed,
+.footer h5 {
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+	text-align: center;
+}
+
+.footer-menu {
+	padding-left: 60px;
+}
+
+.footer-menu h5 {
+	width: 100%;
+	text-align: left;
+}
+
+.footer-designed {
+	margin-bottom: 18px;
+}
+
+.footer-designed span {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.footer-designed img {
+	display: block;
+	margin: 0 auto;
+}
+
+.footer-logo,
+.footer-menu {
+	margin-bottom: 18px;
+}
+
+.menu-list .item-list {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
 @media (max-width: 480px) {
-	.footer::before {
-		margin-bottom: 16px;
-	}
-
-	.footer h5 {
-		line-height: 10px;
-	}
-
 	.footer-logo,
 	.footer-menu,
-	.footer-designed {
-		display: inline-block;
+	.footer-designed,
+	.footer h5 {
 		width: 100%;
-		text-align: center;
 	}
-
-	.footer-designed {
-		margin-bottom: 18px;
-	}
-
-	.footer-designed span {
-		display: inline-block;
-		margin-bottom: 10px;
-	}
-
-	.footer-designed img {
-		display: block;
-		margin: 0 auto;
-	}
-
-	.footer-logo,
-	.footer-menu {
-		margin-bottom: 18px;
-	}
-
-	.menu-list .item-list {
-		display: inline-block;
+	.footer::before {
+		margin-bottom: 16px;
 	}
 }
